@@ -36,7 +36,7 @@ number of this format is "P2".
 
 Here is the image of the previous example in plain PGM format (at the end of each two lines of the image
 a '\ n' character was used, but a space was also fine):
-
+<pre>
 P2
 #Comment
 10 10
@@ -46,7 +46,7 @@ P2
 19 16 18 20 24 22 16 19 26 27 26 20 132 41 36 35 33 35 32 32
 34 33 32 31 31 30 28 30 32 30 47 63 64 59 163 166 162 61 58 57
 54 50 50 52 50 247 247 252 42 42 26 129 231 21 217 222 224 222 29 31
-
+</pre>
 ## Exercise 1
 
 Write a program that generates a gray level image of 256×256 pixels, in which the first row is made of
