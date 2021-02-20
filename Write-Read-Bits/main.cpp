@@ -108,6 +108,59 @@ struct frequencies {
 
 };
 
+int write_32bit(string filename, string output) {
+
+	 ifstream is(filename);
+	 ofstream os(output, ios::binary);
+	 if (!is || !os) return EXIT_FAILURE;
+	 int32_t val = 0;
+	 while (is >> val) {
+		 os.write(reinterpret_cast<const char*>(&val), 4);
+	 }
+	 return EXIT_SUCCESS;
+}
+
+ int read_32bit(string filename, string output) {
+
+	 ifstream is(filename, ios::binary);
+	 ofstream os(output);
+	 if (!is || !os) return EXIT_FAILURE;
+	 int32_t val = 0;
+	 while (is.read(reinterpret_cast<char*>(&val),4)) {
+		 os << val << endl;
+	 }
+	 return EXIT_SUCCESS;
+ }
+
+ int write_int11(string filename, string output) {
+
+	 ifstream is(filename, ios::binary);
+	 ofstream os(output);
+	 if (!is || !os) return EXIT_FAILURE;
+	 int32_t val = 0;
+	 bitwriter bw(os);
+	 while (is >> val) {
+		 bw.write(val, 11);
+	 }
+	 bw.flush();
+
+	 return EXIT_SUCCESS;
+ }
+
+ int read_int11(string filename, string output) {
+	 ifstream is(filename, ios::binary);
+	 ofstream os(output);
+	 if (!is || !os) return EXIT_FAILURE;
+	 int32_t val = 0;
+	 bitreader br(is);
+	 while (br.read(val,11)) {
+		 os << val << endl;
+	 }
+
+	 return EXIT_SUCCESS;
+
+ }
+
 int es1(string filename, string output) {
 
 	ifstream is(filename, ios::binary);
@@ -213,7 +266,7 @@ int main(int argc, char* argv[]) {
 
 	if (argc <3) return EXIT_FAILURE;
 
-	//es1(argv[1], argv[2]);
+	es1(argv[1], argv[2]);
 
 	es2(argv[1], argv[2], argv[3]);
 
