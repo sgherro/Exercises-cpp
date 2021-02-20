@@ -1,4 +1,4 @@
-#Packbits Example
+# Packbits Example
 
 
 Write a command line program in C++ with this syntax:
@@ -40,6 +40,6 @@ With the considered variant instead:
 Leading to a 1 byte saving. Obviously, if the 2-byte run had been followed by another run, there would
 have been no savings.
 
-Note: In general, solutions should not load the entire file into memory or keep the entire sequence
+### Note: In general, solutions should not load the entire file into memory or keep the entire sequence
 compressed or decompressed in memory. Everything should be done by reducing as much as
 possible the amount of data kept in RAM.
