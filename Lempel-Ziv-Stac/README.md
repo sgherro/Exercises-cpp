@@ -65,7 +65,7 @@ It must be interpreted as follows:
 Leading to the following output sequence:
 abacababaaaaaaxca
 
-# Lempel Ziv Stac Example Compression (ITA version)
+# Lempel Ziv Stac Compression Example (ITA version)
 
 L’algoritmo Lempel–Ziv–Stac (LZS, Stac compression, Stacker LZS) è un algoritmo di compressione
 lossless che usa un classico LZSS e una codifica di posizione (offset) e lunghezza (length) a lunghezza
