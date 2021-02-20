@@ -1,4 +1,4 @@
-#X.509 Example (ITA version)
+# X.509 Example (ITA version)
 
 X.509 è uno standard proposto dall'Unione internazionale delle telecomunicazioni (ITU-T), usato per
 definire il formato dei certificati a chiave pubblica (PKC) e dei certificati di attributo (CA). I certificati
