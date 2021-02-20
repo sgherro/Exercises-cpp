@@ -36,7 +36,7 @@ std::string base64_decode(const std::string& input) {
 	return final_string;
 }
 
-/*
+
 std::string base64_encode(const std::string& input) {
 
 	string final_string, curr;
@@ -82,5 +82,3 @@ std::string base64_encode(const std::string& input) {
 
 	return final_string;
 }
-
-*/
