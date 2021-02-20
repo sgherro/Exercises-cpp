@@ -36,16 +36,19 @@ I fotogrammi sono costituiti dai valori di Y di tutti i pixel, seguiti dai valor
 opportunamente.
 
 Un esempio di file potrebbe essere (visto in un editor esadecimale):
+<pre>
 Offset(h) 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 00000000 59 55 56 34 4D 50 45 47 32 20 48 32 38 38 20 57 YUV4MPEG2 H288 W
 00000010 33 35 32 20 43 34 32 30 6A 70 65 67 0A 46 52 41 352 C420jpeg.FRA
 00000020 4D 45 0A 09 2B CC FF F7 FE FE FE FE FE FE FE FE ME..+Ìÿ÷þþþþþþþþ
-…
+</pre>
+
 ovvero:
+<pre>
 YUV4MPEG2 H288 W352 C420jpeg
 FRAME
 .+Ìÿ÷þþþþþþþþ…
-
+</pre>
 In questo esempio, il file contiene fotogrammi in formato CIF (352x288) codificati in YCbCr con Cb e Cr
 sottocampionati di 2 in larghezza e altezza.
 
