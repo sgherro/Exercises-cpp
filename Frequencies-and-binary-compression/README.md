@@ -36,7 +36,11 @@ Values: NumValues numbers with bit size depending on the range, plus 0 padding t
 </pre>
 When option “d” is specified, the program decodes the input file content generating an output text file
 with numbers separated by new lines.
+
 If for example the input file contains: 3 7 -2 14
+
 The minimum is -2 and the maximum is 14, that is a range of 17 values, which requires 5 bits per symbol.
 3 will be 00101, 7 will be 01001, -2 will be 00000, 14 will be 10000.
-So the file will contain: 42 49 4E 21 FF FF FF FE 00 00 00 0E 00 00 00 04 2A 41 00
+
+So the file will contain: 
+42 49 4E 21 FF FF FF FE 00 00 00 0E 00 00 00 04 2A 41 00
