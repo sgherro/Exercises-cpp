@@ -5,25 +5,25 @@ basato su JSON in formato PPM. Un esempio di file è il seguente:
 
 <pre>
 {
-"width" : 500,
-"height" : 500,
-"background" : "FFFFFF",
-"elements" : [
-{
-"width" : 50,
-"height" : 50,
-"x" : 100,
-"y" : 200,
-"color" : "808080"
-},
-{
-"width" : 150,
-"height" : 50,
-"x" : 100,
-"y" : 20,
-"color" : "123456"
-}
-]
+  "width" : 500,
+  "height" : 500,
+  "background" : "FFFFFF",
+  "elements" : [
+    {
+      "width" : 50,
+      "height" : 50,
+      "x" : 100,
+      "y" : 200,
+      "color" : "808080"
+    },
+    {
+      "width" : 150,
+      "height" : 50,
+      "x" : 100,
+      "y" : 20,
+      "color" : "123456"
+    }
+    ]
 }
 </pre>
 
@@ -34,6 +34,8 @@ colorati (pieni). Ogni rettangolo ha larghezza, altezza, posizione orizzontale, 
 Creare un programma che apra un file in formato JSON indicato a linea di comando come primo parametro
 e lo salvi in formato PPM col nome indicato come secondo parametro:
 json2ppm <input.json> <output.ppm>
+
+I colori sono impostati con valori casuali, giusto per rendere l'idea della visualizzazione.
 
 ### Note
 
