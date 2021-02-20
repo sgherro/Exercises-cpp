@@ -1,4 +1,4 @@
-#PGM Example
+# PGM Example
 
 The PGM format (defined on http://netpbm.sourceforge.net/doc/pgm.html) allows storing gray level
 images. The format has a slightly complex definition which requires a lot of time to be wasted checking
@@ -54,12 +54,12 @@ Write a program that generates a gray level image of 256×256 pixels, in which t
 binary PGM and plain PGM formats, described above.  The
 images should appear as a gradient from black to white from top to bottom.
 
-## Esercizio 2
+## Exercise 2
 
 Write a program that opens the "frog_asc.pgm" file and creates an "upside down" version, that is, the first
 line at the top becomes the last at the bottom of the new image, the second becomes the penultimate and
 so on. Save the image in the simplified PGM and plain PGM formats, described above. 
 
-## Esercizio 3
+## Exercise 3
 
 Repeat the previous exercise with the "frog_bin.pgm" file.
