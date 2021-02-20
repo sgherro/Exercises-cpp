@@ -178,9 +178,6 @@ Nel caso dell’esempio dovrebbe stampare
 0, 0, 3, 2+66
 2, 1, 3, 2+67
 0, 1, 16, 2+65
-Esame di Laboratorio di Elaborazione di Dati Multimediali
-12/06/2019
-Pagina 4 di 4
 0, 1, 16, 2+15
 0, 0, 6, 2+3
 0, 0, 1, 2+1
