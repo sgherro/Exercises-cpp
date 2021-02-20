@@ -1,4 +1,4 @@
-#PPM Exercise
+# PPM Exercise
 
 The PPM format (defined on http://netpbm.sourceforge.net/doc/ppm.html) is similar to the already seen
 PGM format and allows you to store color images. As for the PGM we will use the following simplified
@@ -28,7 +28,7 @@ There is also the version of the PPM known as "plain". As for the PGM, all the v
 the pixels of the image) are represented as a sequence of ASCII characters in decimal, followed by space,
 tab, line, or more spaces, tab and line mixed. The magic number of this format is "P3".
 
-##Exercise 1
+## Exercise 1
 
 Write a program that generates a 256×256 color image, in which the first row is made up of 256 values
 with red at 0, the second with 256 values with red 1, the third with 256 values with red to 2 and so on.
@@ -36,7 +36,7 @@ The other channels are all always at 0. Save the image in the simplified PPM and
 described above. The image should appear as a black to red
 gradient from top to bottom.
 
-##Exercise 2
+## Exercise 2
 
 Write a program that accepts the following syntax:
 flip <filename.ppm>
@@ -45,7 +45,7 @@ an "upside down" version, that is, the first line at the top becomes the last at
 the second becomes the penultimate and so on. Save the image in the PPM and plain PPM formats,
 described above, naming them "filename_flip.pgm" and "filename_flip_plain.pgm". 
 
-##Exercise 3
+## Exercise 3
 
 Write a program that accepts the following syntax:
 split <filename.ppm>
@@ -53,7 +53,7 @@ The program opens a PPM image whose name is given as argument on the command lin
 three PGM images named "filename_R.pgm", "filename_G.pgm" and "filename_B.pgm", containing
 the separate R, G and B color planes.
 
-##Exercise 4
+## Exercise 4
 
 Write a program that accepts the following syntax:
 combine <filename>
