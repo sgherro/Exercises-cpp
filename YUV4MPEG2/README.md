@@ -10,7 +10,7 @@ identifica la semantica e un numero arbitrario di altri caratteri non whitespace
 sono codificati in formato ASCII decimale.
 
 I possibili TAGGED-FIELD per lo STEAM-HEADER sono:
-
+<pre>
 ‘W’ larghezza dell’immagine in pixel: intero. Obbligatorio.
 ‘H’ altezza dell’immagine in pixel: intero. Obbligatorio.
 ‘C’ chroma subsampling/formato dei piani colore: stringa. Può essere “420jpeg” (default se non
@@ -20,15 +20,18 @@ se non presente), “t” (prima il campo superiore), “b” (prima il campo in
 ‘F’ frame rate: rapporto espresso come intero:intero.
 ‘A’ rapporto di forma dei pixel: rapporto espresso come intero:intero.
 ‘X’ campo dipendente dall’applicazione: stringa (senza whitespace).
+</pre>
 
 Dopo l’header vengono i fotogrammi, ognuno preceduto da un FRAME-HEADER composto dai caratteri
 “FRAME” di nuovo seguiti da un numero arbitrario di TAGGED-FIELD terminati con il carattere 0x0A
 in ordine qualsiasi.
 I possibili TAGGED-FIELD per il FRAME-HEADER sono:
+
+<pre> 
 ‘I’ interlacciamento del frame: stringa (senza whitespace). La stringa è complessa e non necessaria
 per questo esercizio.
 ‘X’ campo dipendente dall’applicazione: stringa (senza whitespace).
-
+</pre>
 I fotogrammi sono costituiti dai valori di Y di tutti i pixel, seguiti dai valori Cb e Cr sottocampionati
 opportunamente.
 
