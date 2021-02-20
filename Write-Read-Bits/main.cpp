@@ -161,114 +161,11 @@ int write_32bit(string filename, string output) {
 
  }
 
-int es1(string filename, string output) {
-
-	ifstream is(filename, ios::binary);
-	ofstream os(output);
-
-	if (!is || !os) return EXIT_FAILURE;
-	uint8_t car;
-	frequencies f;
-	
-	while (is.read(reinterpret_cast<char*>(&car),1)) {
-		f(car);
-	}
-
-	for (uint32_t i = 0; i < 256; i++) {
-
-		if (f.counter[i] > 0) {
-			os << hex << setfill('0') << setw(2) << i << '\t' << dec << f.counter[i] << '\n';
-		}
-	}
-
-	cout << "Entropia: -" <<dec << f.entropy() << endl;
-
-
-	return EXIT_SUCCESS;
-}
-
-int es2(string option, string filename, string output) {
-
-
-	if (option == "c") {
-		//COMPRESS
-
-		list <uint32_t> numbers;
-		ifstream is(filename);
-		ofstream os(output, ios::binary);
-		if (!is || !os) return EXIT_FAILURE;
-		int32_t max, min;
-		int32_t val = 0;
-		bitwriter bw(os);
-
-		while (is >> val) {
-			if (numbers.size() == 0) {
-				max = val;
-				min = val;
-			}
-			numbers.push_back(val);
-
-			if (val < min) {
-				min = val;
-			}
-			if (max < val) {
-				max = val;
-			}
-		}
-		uint8_t range_bit = numbits(max, min);
-		os << "BIN!";
-		bw.write(min,32);
-		bw.write(max,32);
-		bw.write(numbers.size(),32);
-
-		for (const auto& x : numbers) {
-			uint32_t num = x - min;
-			bw.write(num, range_bit);
-		}
-
-	}
-	else if (option == "d") {
-		//DECOMPRESS
-
-		ifstream is(filename, ios::binary);
-		ofstream os(output);
-		if (!is || !os) return EXIT_FAILURE;
-		
-		int32_t max=0,  min=0;
-		uint32_t tmp = 0;
-		uint32_t num_values=0, n = 0;
-		bitreader br(is);
-		char special[4];
-		is.read(reinterpret_cast<char*>(&special), 4);
-		//if (special != "BIN!") return EXIT_FAILURE;
-		br.read(tmp, 32);
-		min = tmp;
-		br.read(tmp, 32);
-		max = tmp;
-		br.read(num_values, 32);
-		n = numbits(max, min);
-
-		while (num_values-- > 0) {
-			br.read(tmp, n);
-			os << int(tmp) + min << endl;
-		}
-
-	}
-	else {
-		cout << "ERRORE! INSERIRE COME COMANDO c OPPURE d, per specificare \n compressione e decompressione rispettivamente";
-			return EXIT_FAILURE;
-	}
-
-	return EXIT_SUCCESS;
-}
-
 int main(int argc, char* argv[]) {
 
 	if (argc <3) return EXIT_FAILURE;
-
-	es1(argv[1], argv[2]);
-
-	es2(argv[1], argv[2], argv[3]);
+	
+	// do something
 
 	return EXIT_SUCCESS;
 }
