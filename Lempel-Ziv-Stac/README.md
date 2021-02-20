@@ -1,4 +1,4 @@
-# Lempel Ziv Stac Example (ENG version)
+# Lempel Ziv Stac Decompression Example (ENG version)
 
 Lempel–Ziv–Stac (LZS, or Stac compression) is a lossless data compression algorithm that uses a combination of the LZ77 sliding-window compression algorithm and fixed Huffman coding. It was originally developed by Stac Electronics for tape compression, and subsequently adapted for hard disk compression and sold as the Stacker disk compression software. It was later specified as a compression algorithm for various network protocols.
 
@@ -65,7 +65,7 @@ It must be interpreted as follows:
 Leading to the following output sequence:
 abacababaaaaaaxca
 
-# Lempel Ziv Stac Example (ITA version)
+# Lempel Ziv Stac Example Compression (ITA version)
 
 L’algoritmo Lempel–Ziv–Stac (LZS, Stac compression, Stacker LZS) è un algoritmo di compressione
 lossless che usa un classico LZSS e una codifica di posizione (offset) e lunghezza (length) a lunghezza
