@@ -23,7 +23,8 @@ The PBM file consists of:
 <pre>
 A magic number to identify the type of file. The magic number of a PBM image is the sequence of two characters P4.
 The character '\n', that is the Line Feed (LF), that is the character 10 (0x0A), that is a C new line. Beware that this cannot be the pair "\r\n".
-An optional comment identified by a '#' character followed by any sequence of characters and ending with the '\n' character. During reading, it is possible to verify if the '#' character is present, otherwise this field is not present.
+An optional comment identified by a '#' character followed by any sequence of characters and ending with the '\n' character. 
+During reading, it is possible to verify if the '#' character is present, otherwise this field is not present.
 The width of the image (W), formatted as a sequence of ASCII characters in decimal.
 The character ' ', that is a space.
 The height of the image (H), formatted as a sequence of ASCII characters in decimal (i.e. the number of rows).
@@ -42,6 +43,7 @@ Also create this function:
 
 #### Image BinaryImageToImage(const BinaryImage& bimg);
 
-The function must convert a BinaryImage into an Image that is a 1-byte per pixel image. The new Image must be returned as output. Each pixel of the image will be 0 if black, 255 otherwise.
+The function must convert a BinaryImage into an Image that is a 1-byte per pixel image. The new Image must be returned as output. 
+Each pixel of the image will be 0 if black, 255 otherwise.
 
 You can extend both classes as you prefer.
